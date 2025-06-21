@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--text-color); /* ADDED: This makes font adapt to theme */
+}
+
+/* Skill item layout (used by SkillList component) */
+.container li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: var(--skill-bg, #f9f9f9);
+  color: var(--text-color); 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.container li:hover {
+  background-color: var(--skill-hover, #e0f0ff);
+}
+
+/* Icon inside li */
+.container li img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.gradientTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+/* Skill list container */
+.skillList {
+    font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 30px;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+/* Category headers like Languages, Tools, etc. */
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--text-color);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  padding-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+/* Section title: Skills */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* Horizontal line */
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+/* Responsive improvements */
+@media (min-width: 800px) {
+  .skillList {
+    gap: 30px 40px;
+  }
+
+  .container li {
+    font-size: 1.1rem;
+  }
+
+  hr {
+    width: 300px;
+  }
+}

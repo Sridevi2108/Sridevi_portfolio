@@ -1,0 +1,214 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  min-height: 500px;
+  padding: 20px;
+  padding-top: 90px;
+}
+.info h1:first-child {
+  text-transform: none;
+}
+.hero {
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.heroWrapper {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 6px; /* Border thickness */
+  border-radius: 50%;
+  display: inline-block;
+}
+.emailCircle {
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8px; /* Much smaller */
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+.emailCircle img {
+  width: 30px; /* match your other icon sizes */
+  height: 30px;
+  object-fit: contain;
+}
+.gradientText {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Theme Toggle Icon */
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  cursor: pointer;
+}
+
+/* Social Media Icons */
+span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+span a {
+  margin: 0;
+}
+
+span a img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+span a img:hover {
+  transform: scale(1.2);
+}
+
+/* Text Content */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info h1:first-child {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.info h1:nth-child(2) {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--text-color); /* Ensure --text-color is set in your theme */
+  margin: 0;
+}
+
+/* Typing effect or role description */
+.description {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  margin-top: 10px;
+  min-height: 120px;
+}
+
+.description p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.verb {
+  color: #ffb703; /* pastel yellow */
+  font-weight: 700;
+}
+
+.highlight {
+  color: #8ecae6; /* pastel blue */
+  font-size: 2.2rem;
+  font-weight: 700;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Resume Button */
+a {
+  width: fit-content;
+  align-self: center;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(to right, #007cf0, #00dfd8);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 124, 240, 0.2);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: Tablet and up */
+@media (width >= 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+
+  .hero {
+    max-width: 350px;
+    width: 350px;
+  }
+
+  .info h1:first-child {
+    font-size: 2.8rem;
+  }
+
+  .info h1:nth-child(2) {
+    font-size: 4.5rem;
+  }
+
+
+}
+
+/* Large screens */
+@media (width >= 1400px) {
+  .hero {
+    max-width: 400px;
+    width: 400px;
+  }
+
+  .info h1:nth-child(2) {
+    font-size: 5rem;
+  }
+
+  .description {
+    font-size: 2rem;
+  }
+}

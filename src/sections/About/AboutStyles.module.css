@@ -1,0 +1,80 @@
+.container {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+.gradientTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+.text {
+  font-family: 'Poppins', sans-serif; /* or Inter / Roboto */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color); /* or #333 if you want fixed */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.image {
+  width: 200px;
+  border-radius: 50%;
+  border: 4px solid #8ecae6;
+  object-fit: cover;
+}
+
+.text {
+  max-width: 700px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.text span {
+    display: inline; 
+  font-weight: 600;
+  color: #219ebc;
+}
+
+.text strong {
+  color: #ff6ec4;
+}
+
+@media (min-width: 800px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .text {
+    padding-left: 40px;
+  }
+}

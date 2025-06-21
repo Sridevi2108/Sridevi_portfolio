@@ -1,0 +1,105 @@
+.navbar {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0072ff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color .2s;
+}
+
+.links li a:hover,
+.links li a:focus {
+  color: #0072ff;
+}
+
+.themeIcon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  margin-left: 1.2rem;
+}
+
+.menuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.menuBtn span {
+  display: block;
+  width: 27px;
+  height: 3.5px;
+  background: #0072ff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.7rem 0.7rem;
+  }
+  .links {
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .menuBtn {
+    display: flex;
+  }
+  .links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    width: 180px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 1.2rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .links.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,213 @@
+/* EducationStyles.module.css - Optimized for Symmetric Timeline Cards */
+.container {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gradientTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #3498db;
+  transform: translateX(-50%);
+}
+
+.entry {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+}
+
+.entry.right {
+  left: 50%;
+  padding-left: 85px;  /* Symmetric padding for right */
+  padding-right: 0;
+}
+
+.entry.left {
+  left: 0;
+  padding-right: 85px; /* Symmetric padding for left */
+  padding-left: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  background: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 0 0 6px rgba(52, 152, 219, 0.2);
+  z-index: 2;
+}
+
+.entry.right .icon {
+  left: -28px;
+}
+
+.entry.left .icon {
+  right: -28px;
+}
+
+.content {
+  position: relative;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
+  transition: all 0.3s ease;
+  margin: 0; /* Remove side margins for symmetry */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.institution {
+  font-size: 1.15rem;
+  color: #3498db;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* CGPA/marks below duration */
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #7f8c8d;
+  gap: 0.3rem;
+}
+
+.duration {
+  white-space: nowrap; /* Keep date range in one line */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.grade {
+  font-weight: 700;
+  color: #27ae60;
+}
+.entry.left .card {
+  margin-left: -55px; /* Add space between left card and line */
+}
+
+.entry.right .card {
+  margin-left: 0; /* Remove if previously set */
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .gradientTitle {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .timeline::before {
+    left: 38px; /* Adjusted for new icon size */
+  }
+
+  .entry,
+  .entry.left,
+  .entry.right {
+    width: 100%;
+    left: 0;
+    padding-left: 85px; /* Keep icon and card aligned */
+    padding-right: 25px;
+  }
+
+  .icon {
+    left: 38px !important;  /* Force icons to align with the timeline */
+    right: auto !important;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    transform: translate(-50%, -50%);
+  }
+
+  .card {
+    width: calc(100% - 25px);
+    padding: 2rem;
+    margin: 0 !important;
+  }
+
+  .entry.left .card {
+    margin-left: 0 !important;   /* Reset any negative margin for mobile */
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .institution {
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] .card {
+  background: #2d3436;
+  color: #f5f6fa;
+}
+
+[data-theme='dark'] .title {
+  color: #f5f6fa;
+}
+
+[data-theme='dark'] .institution {
+  color: #74b9ff;
+}
+
+[data-theme='dark'] .details {
+  color: #b2bec3;
+}
