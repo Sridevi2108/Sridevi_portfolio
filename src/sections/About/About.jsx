@@ -16,7 +16,7 @@ function About() {
         <div className={styles.text}>
           <p>
             I am <span>Sridevi Raju</span>, a software developer with a strong
-            foundation in <span>Java</span>, <span>Python</span>,
+            foundation in <span>Python</span>,<span>Java</span>,
             <span> React</span>, <span>Flask</span>, and
             <span> full-stack web development</span>. I completed my
             <span> Master of Computer Applications (MCA)</span> from
