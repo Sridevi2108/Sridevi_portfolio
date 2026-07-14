@@ -1,41 +1,61 @@
 import styles from './AboutStyles.module.css';
-import profileImg from '../../assets/hero-img.png'; // Replace with another image if preferred
+import profileImg from '../../assets/hero-img.png';
 
 function About() {
   return (
     <section id="about" className={styles.container}>
-  <h2 className={styles.gradientTitle}>WHO I AM?</h2>
+      <h2 className={styles.gradientTitle}>About Me</h2>
 
+      <div className={styles.content}>
+        <img
+          src={profileImg}
+          alt="Sridevi Raju"
+          className={styles.image}
+        />
 
-  <div className={styles.content}>
-    <img src={profileImg} alt="Sridevi Raju" className={styles.image} />
+        <div className={styles.text}>
+          <p>
+            I am <span>Sridevi Raju</span>, a software developer with a strong
+            foundation in <span>Java</span>, <span>Python</span>,
+            <span> React</span>, <span>Flask</span>, and
+            <span> full-stack web development</span>. I completed my
+            <span> Master of Computer Applications (MCA)</span> from
+            <span> Coimbatore Institute of Technology</span> with a
+            <span> 9.59 CGPA</span> and was honored with the
+            <strong> Best Outgoing Student Award</strong>.
+          </p>
 
-    <div className={styles.text}>
-  <p>
-    I am <span>Sridevi Raju</span>, an aspiring software developer currently pursuing my MCA at
-    <span> Coimbatore Institute of Technology</span>. I’m passionate about crafting intuitive user
-    interfaces, developing smart and scalable systems, and building applications that make a
-    real-world impact.
-  </p>
+          <p>
+            I have professional experience at <span>ICU Medical</span> and
+            <span> Digiverifier</span>, where I worked on software validation,
+            automation, and business solutions. These experiences strengthened
+            my problem-solving skills and exposed me to real-world software
+            development practices.
+          </p>
 
-  <p>
-    I have hands-on experience in both <span>frontend</span> and <span>backend</span> development, and I
-    love turning ideas into production-ready solutions. I actively contribute to
-    <span> open-source projects</span> and I'm currently building real-world applications that blend
-    <span> AI</span>, <span>React</span>, <span>Flask</span>, and <span>MongoDB</span> — including a mental health chatbot named
-    <strong> AuraCare</strong> and a women’s safety platform called <strong>Serenova</strong>.
-  </p>
+          <p>
+            I enjoy building impactful applications that solve real-world
+            problems. My projects include <strong>AuraCare</strong>, an
+            AI-powered multilingual mental health chatbot, and
+            <strong> Serenova</strong>, an AI-based women's safety platform,
+            developed using <span>React</span>, <span>Flask</span>,
+            <span> MongoDB</span>, <span>LLaMA</span>,
+            <span> Rasa</span>, and machine learning techniques.
+          </p>
 
-  <p>
-    With a deep interest in <span>AI/ML</span>, <span>full-stack web development</span>, and
-    <span> problem solving</span>, I'm on a mission to grow every day and secure a role where I can
-    learn, contribute, and thrive — in a company where innovation meets impact.
-  </p>
-</div>
-
-  </div>
-</section>
-
+          <p>
+            I am passionate about software engineering, backend development, and
+            modern web technologies. I am currently seeking full-time
+            <span> Software Engineer</span>,
+            <span> Java Developer</span>,
+            <span> Python Developer</span>, or
+            <span> Full Stack Developer</span> opportunities in
+            <span> Chennai</span> or <span>Remote</span>, where I can
+            contribute, learn, and grow while building meaningful software.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
